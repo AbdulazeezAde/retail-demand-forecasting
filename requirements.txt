@@ -7,3 +7,4 @@ pickle
 prophet
 scikit-learn
 statsmodels
+xgboost
