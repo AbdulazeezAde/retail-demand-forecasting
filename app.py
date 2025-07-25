@@ -4,7 +4,6 @@ import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
-import pickle
 import joblib
 from datetime import datetime, timedelta
 import warnings
@@ -50,9 +49,7 @@ def load_models():
     """Load pre-trained models"""
     try:
         # Load Prophet model with pickle
-        with open('best_prophet_model.pkl', 'rb') as f:
-            prophet_model = pickle.load(f)
-        
+        prophet_model = joblib.load('best_prophet_model.pkl')
         # Load Random Forest and XGBoost models with joblib
         rf_model = joblib.load('best_random_forest_model.pkl')
         xgb_model = joblib.load('best_xgboost_model.pkl')
