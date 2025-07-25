@@ -1,7 +1,6 @@
 streamlit
 plotly
 joblib
-pickle
 prophet
 scikit-learn
 statsmodels
